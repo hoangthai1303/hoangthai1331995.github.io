@@ -5,23 +5,23 @@ $('#div-chat').hide();
 
 let customConfig;
 
-// $.ajax({
-//   url: "https://service.xirsys.com/ice",
-//   data: {
-//     ident: "vanpho",
-//     secret: "2b1c2dfe-4374-11e7-bd72-5a790223a9ce",
-//     domain: "vanpho93.github.io",
-//     application: "default",
-//     room: "default",
-//     secure: 1
-//   },
-//   success: function (data, status) {
-//     // data.d is where the iceServers object lives
-//     customConfig = data.d;
-//     console.log(customConfig);
-//   },
-//   async: false
-// });
+$.ajax({
+  url: "https://service.xirsys.com/ice",
+  data: {
+    ident: "hoangthai1331995",
+    secret: "fc9cdd36-1f89-11e9-8e0e-0242ac110003",
+    domain: "hoangthai1331995.github.io",
+    application: "default",
+    room: "default",
+    secure: 1
+  },
+  success: function (data, status) {
+    // data.d is where the iceServers object lives
+    customConfig = data.d;
+    console.log(customConfig);
+  },
+  async: false
+});
 
 socket.on('DANH_SACH_ONLINE', arrUserInfo => {
     $('#div-chat').show();

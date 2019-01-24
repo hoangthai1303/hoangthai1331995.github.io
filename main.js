@@ -59,14 +59,14 @@ function playStream(idVideoTag, stream) {
 // openStream()
 // .then(stream => playStream('localStream', stream));
 
-// const peer = new Peer({ 
-//     key: 'peerjs', 
-//     host: 'mypeer3005.herokuapp.com', 
-//     secure: true, 
-//     port: 443, 
-//     config: customConfig 
-// });
-const peer = new Peer();
+const peer = new Peer({ 
+    key: 'peerjs', 
+    host: 'peerthairtc.herokuapp.com', 
+    secure: true, 
+    port: 443, 
+    config: customConfig 
+});
+// const peer = new Peer();
 peer.on('open', id => {
     $('#my-peer').append(id);
     $('#btnSignUp').click(() => {
